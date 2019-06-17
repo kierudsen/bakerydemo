@@ -9,7 +9,7 @@ Note we do _not_ recommend using this project to start your own site - the demo 
 
 **Document contents**
 
-- [Installation ](#installation)
+- [Installation](#installation)
 - [Next steps](#next-steps)
 - [Contributing](#contributing)
 - [Other notes](#other-notes)
@@ -35,7 +35,7 @@ Setup with Vagrant
 Once you've installed the necessary dependencies run the following commands:
 
 ```bash
-git clone git@github.com:wagtail/bakerydemo.git
+git clone https://github.com/wagtail/bakerydemo.git
 cd bakerydemo
 vagrant up
 vagrant ssh
@@ -55,15 +55,17 @@ Setup with Docker
 
 #### Dependencies
 * [Docker](https://docs.docker.com/engine/installation/)
+* [Docker Compose](https://docs.docker.com/compose/install/)
 
 ### Installation
 Run the following commands:
 
 ```bash
-git clone git@github.com:wagtail/bakerydemo.git
+git clone https://github.com/wagtail/bakerydemo.git
 cd bakerydemo
 docker-compose up --build -d
 docker-compose run app /venv/bin/python manage.py load_initial_data
+docker-compose up
 ```
 
 The demo site will now be accessible at [http://localhost:8000/](http://localhost:8000/) and the Wagtail admin
@@ -85,6 +87,7 @@ Setup with Virtualenv
 You can run the Wagtail demo locally without setting up Vagrant or Docker and simply use Virtualenv, which is the [recommended installation approach](https://docs.djangoproject.com/en/1.10/topics/install/#install-the-django-code) for Django itself.
 
 #### Dependencies
+* Python 3.4, 3.5 or 3.6
 * [Virtualenv](https://virtualenv.pypa.io/en/stable/installation/)
 * [VirtualenvWrapper](https://virtualenvwrapper.readthedocs.io/en/latest/install.html) (optional)
 
@@ -94,10 +97,21 @@ With [PIP](https://github.com/pypa/pip) and [virtualenvwrapper](https://virtuale
 installed, run:
 
     mkvirtualenv wagtailbakerydemo
+    python --version
+
+Confirm that this is showing a compatible version of Python 3.x. If not, and you have multiple versions of Python installed on your system, you may need to specify the appropriate version when creating the virtualenv:
+
+    deactivate
+    rmvirtualenv wagtailbakerydemo
+    mkvirtualenv wagtailbakerydemo --python=python3.6
+    python --version
+
+Now we're ready to set up the bakery demo project itself:
+
     cd ~/dev [or your preferred dev directory]
-    git clone git@github.com:wagtail/bakerydemo.git
+    git clone https://github.com/wagtail/bakerydemo.git
     cd bakerydemo
-    pip install -r requirements.txt
+    pip install -r requirements/base.txt
 
 Next, we'll set up our local environment variables. We use [django-dotenv](https://github.com/jpadilla/django-dotenv)
 to help with this. It reads environment variables located in a file name `.env` in the top level directory of the project. The only variable we need to start is `DJANGO_SETTINGS_MODULE`:
@@ -159,6 +173,11 @@ environment, set the same environment variables there using the method appropria
 
 Once Heroku restarts your application or your Docker container is refreshed, you should have persistent media storage!
 
+To copy the initial data included with this demo to the S3 bucket (assuming you ran `./manage.py load_initial_data` per
+the above), you can use the AWS CLI included with the requirements:
+
+    heroku run aws s3 sync bakerydemo/media/original_images/ s3://<bucket-name>/original_images/
+
 # Next steps
 
 Hopefully after you've experimented with the demo you'll want to create your own site. To do that you'll want to run the `wagtail start` command in your environment of choice. You can find more information in the [getting started Wagtail CMS docs](http://wagtail.readthedocs.io/en/latest/getting_started/index.html).
@@ -186,7 +205,7 @@ Because we can't (easily) use ElasticSearch for this demo, we use wagtail's nati
 However, native DB search can't search specific fields in our models on a generalized `Page` query.
 So for demo purposes ONLY, we hard-code the model names we want to search into `search.views`, which is
 not ideal. In production, use ElasticSearch and a simplified search query, per
-[http://docs.wagtail.io/en/v1.8.1/topics/search/searching.html](http://docs.wagtail.io/en/v1.8.1/topics/search/searching.html).
+[http://docs.wagtail.io/en/v1.13.1/topics/search/searching.html](http://docs.wagtail.io/en/v1.13.1/topics/search/searching.html).
 
 ### Sending email from the contact form
 

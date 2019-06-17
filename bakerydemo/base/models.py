@@ -5,7 +5,7 @@ from django.db import models
 from modelcluster.fields import ParentalKey
 from modelcluster.models import ClusterableModel
 
-from wagtail.wagtailadmin.edit_handlers import (
+from wagtail.admin.edit_handlers import (
     FieldPanel,
     FieldRowPanel,
     InlinePanel,
@@ -13,18 +13,18 @@ from wagtail.wagtailadmin.edit_handlers import (
     PageChooserPanel,
     StreamFieldPanel,
 )
-from wagtail.wagtailcore.fields import RichTextField, StreamField
-from wagtail.wagtailcore.models import Collection, Page
-from wagtail.wagtailforms.models import AbstractEmailForm, AbstractFormField
-from wagtail.wagtailimages.edit_handlers import ImageChooserPanel
-from wagtail.wagtailsearch import index
-from wagtail.wagtailsnippets.models import register_snippet
+from wagtail.core.fields import RichTextField, StreamField
+from wagtail.core.models import Collection, Page
+from wagtail.contrib.forms.models import AbstractEmailForm, AbstractFormField
+from wagtail.images.edit_handlers import ImageChooserPanel
+from wagtail.search import index
+from wagtail.snippets.models import register_snippet
 
 from .blocks import BaseStreamBlock
 
 
 @register_snippet
-class People(ClusterableModel):
+class People(index.Indexed, ClusterableModel):
     """
     A Django model to store People objects.
     It uses the `@register_snippet` decorator to allow it to be accessible
@@ -50,13 +50,17 @@ class People(ClusterableModel):
     )
 
     panels = [
-        FieldPanel('first_name', classname="col6"),
-        FieldPanel('last_name', classname="col6"),
+        MultiFieldPanel([
+            FieldRowPanel([
+                FieldPanel('first_name', classname="col6"),
+                FieldPanel('last_name', classname="col6"),
+            ])
+        ], "Name"),
         FieldPanel('job_title'),
         ImageChooserPanel('image')
     ]
 
-    search_fields = Page.search_fields + [
+    search_fields = [
         index.SearchField('first_name'),
         index.SearchField('last_name'),
     ]
@@ -336,7 +340,7 @@ class FormField(AbstractFormField):
     can read more about Wagtail forms at:
     http://docs.wagtail.io/en/latest/reference/contrib/forms/index.html
     """
-    page = ParentalKey('FormPage', related_name='form_fields')
+    page = ParentalKey('FormPage', related_name='form_fields', on_delete=models.CASCADE)
 
 
 class FormPage(AbstractEmailForm):

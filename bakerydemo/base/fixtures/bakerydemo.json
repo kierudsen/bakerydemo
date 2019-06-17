@@ -1187,7 +1187,7 @@
   "fields": {
     "hostname": "127.0.0.1",
     "port": 8000,
-    "site_name": "Main",
+    "site_name": "Wagtail Bakery",
     "root_page": 60,
     "is_default_site": true
   }
@@ -1514,8 +1514,9 @@
   "fields": {
     "path": "0001",
     "depth": 1,
-    "numchild": 0,
+    "numchild": 1,
     "title": "Root",
+    "draft_title": "Root",
     "slug": "root",
     "content_type": [
       "wagtailcore",
@@ -1544,6 +1545,7 @@
     "depth": 3,
     "numchild": 11,
     "title": "Breads",
+    "draft_title": "Breads",
     "slug": "breads",
     "content_type": [
       "breads",
@@ -1572,6 +1574,7 @@
     "depth": 4,
     "numchild": 0,
     "title": "Anadama",
+    "draft_title": "Anadama",
     "slug": "anadama-bread",
     "content_type": [
       "breads",
@@ -1600,6 +1603,7 @@
     "depth": 4,
     "numchild": 0,
     "title": "Anpan",
+    "draft_title": "Anpan",
     "slug": "anpan",
     "content_type": [
       "breads",
@@ -1628,6 +1632,7 @@
     "depth": 4,
     "numchild": 0,
     "title": "Appam",
+    "draft_title": "Appam",
     "slug": "appam-hoppers",
     "content_type": [
       "breads",
@@ -1656,6 +1661,7 @@
     "depth": 4,
     "numchild": 0,
     "title": "Arepa",
+    "draft_title": "Arepa",
     "slug": "arepa",
     "content_type": [
       "breads",
@@ -1684,6 +1690,7 @@
     "depth": 4,
     "numchild": 0,
     "title": "Bagel",
+    "draft_title": "Bagel",
     "slug": "bagel",
     "content_type": [
       "breads",
@@ -1712,6 +1719,7 @@
     "depth": 4,
     "numchild": 0,
     "title": "Baguette",
+    "draft_title": "Baguette",
     "slug": "baguette-french-stick-french-bread",
     "content_type": [
       "breads",
@@ -1740,6 +1748,7 @@
     "depth": 4,
     "numchild": 0,
     "title": "Bammy",
+    "draft_title": "Bammy",
     "slug": "bammy",
     "content_type": [
       "breads",
@@ -1768,6 +1777,7 @@
     "depth": 4,
     "numchild": 0,
     "title": "Bazin",
+    "draft_title": "Bazin",
     "slug": "bazin",
     "content_type": [
       "breads",
@@ -1796,6 +1806,7 @@
     "depth": 4,
     "numchild": 0,
     "title": "Bhakri",
+    "draft_title": "Bhakri",
     "slug": "bhakri",
     "content_type": [
       "breads",
@@ -1824,6 +1835,7 @@
     "depth": 4,
     "numchild": 0,
     "title": "Black bread",
+    "draft_title": "Black bread",
     "slug": "black-bread",
     "content_type": [
       "breads",
@@ -1852,6 +1864,7 @@
     "depth": 4,
     "numchild": 0,
     "title": "Bolani",
+    "draft_title": "Bolani",
     "slug": "bolani",
     "content_type": [
       "breads",
@@ -1880,6 +1893,7 @@
     "depth": 2,
     "numchild": 6,
     "title": "Welcome to the Wagtail Bakery!",
+    "draft_title": "Welcome to the Wagtail Bakery!",
     "slug": "home",
     "content_type": [
       "base",
@@ -1908,6 +1922,7 @@
     "depth": 3,
     "numchild": 6,
     "title": "Blog",
+    "draft_title": "Blog",
     "slug": "blog",
     "content_type": [
       "blog",
@@ -1936,6 +1951,7 @@
     "depth": 4,
     "numchild": 0,
     "title": "Tracking Wild Yeast",
+    "draft_title": "Tracking Wild Yeast",
     "slug": "wild-yeast",
     "content_type": [
       "blog",
@@ -1964,6 +1980,7 @@
     "depth": 3,
     "numchild": 6,
     "title": "Locations",
+    "draft_title": "Locations",
     "slug": "locations",
     "content_type": [
       "locations",
@@ -1992,6 +2009,7 @@
     "depth": 4,
     "numchild": 0,
     "title": "Hof",
+    "draft_title": "Hof",
     "slug": "new-york",
     "content_type": [
       "locations",
@@ -2020,6 +2038,7 @@
     "depth": 4,
     "numchild": 0,
     "title": "Reykjavik",
+    "draft_title": "Reykjavik",
     "slug": "reykjavik",
     "content_type": [
       "locations",
@@ -2048,6 +2067,7 @@
     "depth": 4,
     "numchild": 0,
     "title": "Vik",
+    "draft_title": "Vik",
     "slug": "london",
     "content_type": [
       "locations",
@@ -2076,6 +2096,7 @@
     "depth": 4,
     "numchild": 0,
     "title": "Selfoss",
+    "draft_title": "Selfoss",
     "slug": "wellington",
     "content_type": [
       "locations",
@@ -2104,6 +2125,7 @@
     "depth": 4,
     "numchild": 0,
     "title": "Bread and Circuses",
+    "draft_title": "Bread and Circuses",
     "slug": "bread-circuses",
     "content_type": [
       "blog",
@@ -2132,6 +2154,7 @@
     "depth": 3,
     "numchild": 0,
     "title": "Contact Us",
+    "draft_title": "Contact Us",
     "slug": "contact-us",
     "content_type": [
       "base",
@@ -2160,6 +2183,7 @@
     "depth": 3,
     "numchild": 0,
     "title": "Gallery",
+    "draft_title": "Gallery",
     "slug": "gallery",
     "content_type": [
       "base",
@@ -2190,6 +2214,7 @@
     "depth": 4,
     "numchild": 0,
     "title": "The Great Icelandic Baking Show",
+    "draft_title": "The Great Icelandic Baking Show",
     "slug": "icelandic-baking",
     "content_type": [
       "blog",
@@ -2220,6 +2245,7 @@
     "depth": 4,
     "numchild": 0,
     "title": "The Joy of (Baking) Soda",
+    "draft_title": "The Joy of (Baking) Soda",
     "slug": "joy-baking-soda",
     "content_type": [
       "blog",
@@ -2250,6 +2276,7 @@
     "depth": 4,
     "numchild": 0,
     "title": "The Greatest Thing Since Sliced Bread",
+    "draft_title": "The Greatest Thing Since Sliced Bread",
     "slug": "sliced-bread",
     "content_type": [
       "blog",
@@ -2280,6 +2307,7 @@
     "depth": 3,
     "numchild": 0,
     "title": "About",
+    "draft_title": "About",
     "slug": "about",
     "content_type": [
       "base",
@@ -2310,6 +2338,7 @@
     "depth": 4,
     "numchild": 0,
     "title": "Desserts with Benefits",
+    "draft_title": "Desserts with Benefits",
     "slug": "desserts-benefits",
     "content_type": [
       "blog",
@@ -2340,6 +2369,7 @@
     "depth": 4,
     "numchild": 0,
     "title": "H\u00f6fn",
+    "draft_title": "H\u00f6fn",
     "slug": "hofn",
     "content_type": [
       "locations",
@@ -2370,6 +2400,7 @@
     "depth": 4,
     "numchild": 0,
     "title": "Akranes",
+    "draft_title": "Akranes",
     "slug": "akranes",
     "content_type": [
       "locations",
@@ -2429,7 +2460,7 @@
     "focal_point_y": null,
     "focal_point_width": null,
     "focal_point_height": null,
-    "file_size": 179102
+    "file_size": 173675
   }
 },
 {
@@ -2449,7 +2480,7 @@
     "focal_point_y": null,
     "focal_point_width": null,
     "focal_point_height": null,
-    "file_size": 618145
+    "file_size": 506419
   }
 },
 {
@@ -2469,7 +2500,7 @@
     "focal_point_y": null,
     "focal_point_width": null,
     "focal_point_height": null,
-    "file_size": 170790
+    "file_size": 166505
   }
 },
 {
@@ -2489,7 +2520,7 @@
     "focal_point_y": null,
     "focal_point_width": null,
     "focal_point_height": null,
-    "file_size": 178745
+    "file_size": 174743
   }
 },
 {
@@ -2509,7 +2540,7 @@
     "focal_point_y": null,
     "focal_point_width": null,
     "focal_point_height": null,
-    "file_size": 138091
+    "file_size": 127107
   }
 },
 {
@@ -2529,7 +2560,7 @@
     "focal_point_y": null,
     "focal_point_width": null,
     "focal_point_height": null,
-    "file_size": 277532
+    "file_size": 247052
   }
 },
 {
@@ -2549,7 +2580,7 @@
     "focal_point_y": null,
     "focal_point_width": null,
     "focal_point_height": null,
-    "file_size": null
+    "file_size": 122348
   }
 },
 {
@@ -2589,7 +2620,7 @@
     "focal_point_y": null,
     "focal_point_width": null,
     "focal_point_height": null,
-    "file_size": null
+    "file_size": 137708
   }
 },
 {
@@ -2609,7 +2640,7 @@
     "focal_point_y": null,
     "focal_point_width": null,
     "focal_point_height": null,
-    "file_size": 78729
+    "file_size": 73964
   }
 },
 {
@@ -2639,8 +2670,8 @@
     "collection": 4,
     "title": "Anadama_bread",
     "file": "original_images/Anadama_bread_1.jpg",
-    "width": 4752,
-    "height": 3168,
+    "width": 1200,
+    "height": 800,
     "created_at": "2017-02-23T07:48:33.730Z",
     "uploaded_by_user": [
       "admin"
@@ -2649,7 +2680,7 @@
     "focal_point_y": null,
     "focal_point_width": null,
     "focal_point_height": null,
-    "file_size": 486289
+    "file_size": 72910
   }
 },
 {
@@ -2659,8 +2690,8 @@
     "collection": 4,
     "title": "Appam",
     "file": "original_images/Appam_served_with_Coconut_Milk_in_Tamil_Nadu.JPG",
-    "width": 2362,
-    "height": 1064,
+    "width": 1200,
+    "height": 541,
     "created_at": "2017-02-23T07:48:34.056Z",
     "uploaded_by_user": [
       "admin"
@@ -2669,7 +2700,7 @@
     "focal_point_y": null,
     "focal_point_width": null,
     "focal_point_height": null,
-    "file_size": 205629
+    "file_size": 79398
   }
 },
 {
@@ -2679,8 +2710,8 @@
     "collection": 4,
     "title": "Arepa",
     "file": "original_images/Arepa_asada.JPG",
-    "width": 1600,
-    "height": 1200,
+    "width": 1200,
+    "height": 900,
     "created_at": "2017-02-23T07:48:34.189Z",
     "uploaded_by_user": [
       "admin"
@@ -2689,7 +2720,7 @@
     "focal_point_y": null,
     "focal_point_width": null,
     "focal_point_height": null,
-    "file_size": 95602
+    "file_size": 56891
   }
 },
 {
@@ -2699,8 +2730,8 @@
     "collection": 4,
     "title": "Bagel",
     "file": "original_images/Bagel.jpg",
-    "width": 1920,
-    "height": 1660,
+    "width": 1200,
+    "height": 1038,
     "created_at": "2017-02-23T07:48:34.296Z",
     "uploaded_by_user": [
       "admin"
@@ -2709,7 +2740,7 @@
     "focal_point_y": null,
     "focal_point_width": null,
     "focal_point_height": null,
-    "file_size": 244476
+    "file_size": 104030
   }
 },
 {
@@ -2719,8 +2750,8 @@
     "collection": 4,
     "title": "Baguette",
     "file": "original_images/Baguette_de_pain_WikiCheese_Lausanne.jpg",
-    "width": 4032,
-    "height": 1958,
+    "width": 1200,
+    "height": 583,
     "created_at": "2017-02-23T07:48:34.417Z",
     "uploaded_by_user": [
       "admin"
@@ -2729,7 +2760,7 @@
     "focal_point_y": null,
     "focal_point_width": null,
     "focal_point_height": null,
-    "file_size": 328940
+    "file_size": 41014
   }
 },
 {
@@ -2739,8 +2770,8 @@
     "collection": 4,
     "title": "Bammies",
     "file": "original_images/Bammies.jpg",
-    "width": 1700,
-    "height": 1527,
+    "width": 1200,
+    "height": 1078,
     "created_at": "2017-02-23T07:48:34.498Z",
     "uploaded_by_user": [
       "admin"
@@ -2749,7 +2780,7 @@
     "focal_point_y": null,
     "focal_point_width": null,
     "focal_point_height": null,
-    "file_size": 225077
+    "file_size": 137317
   }
 },
 {
@@ -2759,8 +2790,8 @@
     "collection": 4,
     "title": "Bazin",
     "file": "original_images/Bazin.jpg",
-    "width": 1600,
-    "height": 1200,
+    "width": 1200,
+    "height": 900,
     "created_at": "2017-02-23T07:48:34.571Z",
     "uploaded_by_user": [
       "admin"
@@ -2769,7 +2800,7 @@
     "focal_point_y": null,
     "focal_point_width": null,
     "focal_point_height": null,
-    "file_size": 159993
+    "file_size": 112991
   }
 },
 {
@@ -2799,8 +2830,8 @@
     "collection": 4,
     "title": "Belgian Waffle",
     "file": "original_images/Belgische_waffeln.jpg",
-    "width": 2025,
-    "height": 1536,
+    "width": 1200,
+    "height": 910,
     "created_at": "2017-02-23T07:48:34.735Z",
     "uploaded_by_user": [
       "admin"
@@ -2809,7 +2840,7 @@
     "focal_point_y": null,
     "focal_point_width": null,
     "focal_point_height": null,
-    "file_size": 317562
+    "file_size": 151259
   }
 },
 {
@@ -2829,7 +2860,7 @@
     "focal_point_y": null,
     "focal_point_width": null,
     "focal_point_height": null,
-    "file_size": 105801
+    "file_size": 104969
   }
 },
 {
@@ -2839,8 +2870,8 @@
     "collection": 4,
     "title": "Misc Breads",
     "file": "original_images/Breads_1.jpg",
-    "width": 2700,
-    "height": 1792,
+    "width": 1200,
+    "height": 796,
     "created_at": "2017-02-23T07:48:34.909Z",
     "uploaded_by_user": [
       "admin"
@@ -2849,7 +2880,7 @@
     "focal_point_y": null,
     "focal_point_width": null,
     "focal_point_height": null,
-    "file_size": 534217
+    "file_size": 167917
   }
 },
 {
@@ -2859,8 +2890,8 @@
     "collection": 4,
     "title": "Rye Bread",
     "file": "original_images/Sourdough_rye_with_walnuts.jpg",
-    "width": 2222,
-    "height": 1431,
+    "width": 1200,
+    "height": 773,
     "created_at": "2017-02-23T08:18:10.895Z",
     "uploaded_by_user": [
       "admin"
@@ -2869,7 +2900,7 @@
     "focal_point_y": null,
     "focal_point_width": null,
     "focal_point_height": null,
-    "file_size": 697587
+    "file_size": 213288
   }
 },
 {
@@ -2879,8 +2910,8 @@
     "collection": 4,
     "title": "Bhakri",
     "file": "original_images/Bhakri_1.jpg",
-    "width": 1920,
-    "height": 1440,
+    "width": 1200,
+    "height": 900,
     "created_at": "2017-02-23T08:25:03.822Z",
     "uploaded_by_user": [
       "admin"
@@ -2889,7 +2920,7 @@
     "focal_point_y": null,
     "focal_point_width": null,
     "focal_point_height": null,
-    "file_size": null
+    "file_size": 193665
   }
 },
 {
@@ -2969,7 +3000,7 @@
     "focal_point_y": null,
     "focal_point_width": null,
     "focal_point_height": null,
-    "file_size": null
+    "file_size": 167793
   }
 },
 {
@@ -2989,7 +3020,7 @@
     "focal_point_y": null,
     "focal_point_width": null,
     "focal_point_height": null,
-    "file_size": null
+    "file_size": 206071
   }
 },
 {
@@ -2999,17 +3030,17 @@
     "collection": 1,
     "title": "Glacier descending near Hof",
     "file": "original_images/hof-cornell-university-filter.jpg",
-    "width": 1400,
-    "height": 1106,
+    "width": 1200,
+    "height": 948,
     "created_at": "2017-03-29T17:46:14.914Z",
     "uploaded_by_user": [
       "admin"
     ],
-    "focal_point_x": 604,
-    "focal_point_y": 301,
-    "focal_point_width": 1203,
-    "focal_point_height": 602,
-    "file_size": 358165
+    "focal_point_x": 518,
+    "focal_point_y": 248,
+    "focal_point_width": 1031,
+    "focal_point_height": 496,
+    "file_size": 279068
   }
 },
 {
@@ -3029,7 +3060,7 @@
     "focal_point_y": null,
     "focal_point_width": null,
     "focal_point_height": null,
-    "file_size": null
+    "file_size": 207895
   }
 },
 {
@@ -3039,8 +3070,8 @@
     "collection": 1,
     "title": "Hofn from above",
     "file": "original_images/Hofn.jpg",
-    "width": 2048,
-    "height": 1365,
+    "width": 1200,
+    "height": 800,
     "created_at": "2017-03-29T18:04:27.068Z",
     "uploaded_by_user": [
       "admin"
@@ -3049,7 +3080,7 @@
     "focal_point_y": null,
     "focal_point_width": null,
     "focal_point_height": null,
-    "file_size": null
+    "file_size": 369123
   }
 },
 {
@@ -3059,17 +3090,17 @@
     "collection": 1,
     "title": "Arkranes",
     "file": "original_images/Akranes.jpg",
-    "width": 2048,
-    "height": 1365,
+    "width": 1200,
+    "height": 800,
     "created_at": "2017-03-29T18:08:27.770Z",
     "uploaded_by_user": [
       "admin"
     ],
-    "focal_point_x": 986,
-    "focal_point_y": 813,
-    "focal_point_width": 1759,
-    "focal_point_height": 917,
-    "file_size": 511480
+    "focal_point_x": 578,
+    "focal_point_y": 476,
+    "focal_point_width": 1031,
+    "focal_point_height": 537,
+    "file_size": 225856
   }
 },
 {
@@ -3476,7 +3507,7 @@
   "fields": {
     "introduction": "Things to know about this demo site",
     "image": 41,
-    "body": "[{\"type\": \"paragraph_block\", \"value\": \"<h2>Welcome to the Wagtail Demo Site!</h2><p>If you've gotten this far, congratulations - you're running an instance of a killer content management system written for and on top of Django, <i>the framework for perfectionists with deadlines.</i></p><p>What does Wagtail get you that Django alone does not?\\u00a0</p><p></p><ul><li>Focus on content creators/managers, rather than developers (but developer-friendly!)</li><li>\\\"Page-centric\\\" content modeling</li><li>Beautiful, modern, intuitive user interface optimized for content people</li><li>Super-powerful hierarchical content management (\\\"content trees\\\")</li><li>User- and group-based permissions system attached to content hierarchies</li><li>Flexible image resizing with a ton of image display helpers</li><li>Innovative \\\"<a href=\\\"https://torchbox.com/blog/rich-text-fields-and-faster-horses/\\\">StreamFields</a>\\\" as an alternative to traditional \\\"anything goes\\\" rich text fields</li><li>Intuitive choosers for embedded Pages, Images, Documents and other content</li><li>Native integration with ElasticSearch to help you build powerful search features</li><li>Template tags to help create image renditions, smart links, and to navigate content trees</li></ul><p>If you're new to Wagtail, there are two primary paths to learning:</p><p></p><ul><li>The source code that powers this demo site</li><li>The official <a href=\\\"http://docs.wagtail.io/en/v1.9/getting_started/index.html\\\">tutorial</a></li></ul><h3>Wagtail Features Demonstrated in This Demo</h3><p></p><p>This demo is aimed primarily at developers wanting to learn more about the internals of Wagtail, and assumes you'll be reading its source code. After browsing the features, pay special attention to code we've used for:</p><p></p><ul><li>Dividing a project up into multiple apps</li><li>Custom content models and \\\"contexts\\\" in the \\\"breads\\\" and \\\"locations\\\" apps</li><li>A typical weblog in the \\\"blog\\\" app</li><li>Example of using a \\\"base\\\" app to contain misc additional functionality (e.g. Contact Form, About, etc.)</li><li>\\\"StandardPage\\\" model using mixins borrowed from other apps</li><li>Example of customizing the Wagtail Admin via <i>wagtail_hooks</i></li><li>Example of using the Wagtail \\\"snippets\\\" system to represent bread categories, countries and ingredients</li><li>Example of a custom \\\"Galleries\\\" feature that pulls in images used in other content types in the system</li><li>Example of creating ManyToMany relationships via the Ingredients feature on BreadPage</li><li>Lots more</li></ul><p></p><p></p>\"}]"
+    "body": "[{\"type\": \"paragraph_block\", \"value\": \"<h2>Welcome to the Wagtail Demo Site!</h2><p>If you've gotten this far, congratulations - you're running an instance of a killer content management system written for and on top of Django, <i>the framework for perfectionists with deadlines.</i></p><p>What does Wagtail get you that Django alone does not?\\u00a0</p><p></p><ul><li>Focus on content creators/managers, rather than developers (but developer-friendly!)</li><li>\\\"Page-centric\\\" content modeling</li><li>Beautiful, modern, intuitive user interface optimized for content people</li><li>Super-powerful hierarchical content management (\\\"content trees\\\")</li><li>User- and group-based permissions system attached to content hierarchies</li><li>Flexible image resizing with a ton of image display helpers</li><li>Innovative \\\"<a href=\\\"https://torchbox.com/blog/rich-text-fields-and-faster-horses/\\\">StreamFields</a>\\\" as an alternative to traditional \\\"anything goes\\\" rich text fields</li><li>Intuitive choosers for embedded Pages, Images, Documents and other content</li><li>Native integration with ElasticSearch to help you build powerful search features</li><li>Template tags to help create image renditions, smart links, and to navigate content trees</li></ul><p>If you're new to Wagtail, there are two primary paths to learning:</p><p></p><ul><li>The source code that powers this demo site</li><li>The official <a href=\\\"http://docs.wagtail.io/en/stable/getting_started/index.html\\\">tutorial</a></li></ul><h3>Wagtail Features Demonstrated in This Demo</h3><p></p><p>This demo is aimed primarily at developers wanting to learn more about the internals of Wagtail, and assumes you'll be reading its source code. After browsing the features, pay special attention to code we've used for:</p><p></p><ul><li>Dividing a project up into multiple apps</li><li>Custom content models and \\\"contexts\\\" in the \\\"breads\\\" and \\\"locations\\\" apps</li><li>A typical weblog in the \\\"blog\\\" app</li><li>Example of using a \\\"base\\\" app to contain misc additional functionality (e.g. Contact Form, About, etc.)</li><li>\\\"StandardPage\\\" model using mixins borrowed from other apps</li><li>Example of customizing the Wagtail Admin via <i>wagtail_hooks</i></li><li>Example of using the Wagtail \\\"snippets\\\" system to represent bread categories, countries and ingredients</li><li>Example of a custom \\\"Galleries\\\" feature that pulls in images used in other content types in the system</li><li>Example of creating ManyToMany relationships via the Ingredients feature on BreadPage</li><li>Lots more</li></ul><p></p><p></p>\"}]"
   }
 }
 ]

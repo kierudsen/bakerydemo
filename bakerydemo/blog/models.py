@@ -9,13 +9,13 @@ from modelcluster.fields import ParentalKey
 
 from taggit.models import Tag, TaggedItemBase
 
-from wagtail.contrib.wagtailroutablepage.models import RoutablePageMixin, route
-from wagtail.wagtailadmin.edit_handlers import FieldPanel, InlinePanel, StreamFieldPanel
-from wagtail.wagtailcore.fields import StreamField
-from wagtail.wagtailcore.models import Page, Orderable
-from wagtail.wagtailimages.edit_handlers import ImageChooserPanel
-from wagtail.wagtailsearch import index
-from wagtail.wagtailsnippets.edit_handlers import SnippetChooserPanel
+from wagtail.contrib.routable_page.models import RoutablePageMixin, route
+from wagtail.admin.edit_handlers import FieldPanel, InlinePanel, StreamFieldPanel
+from wagtail.core.fields import StreamField
+from wagtail.core.models import Page, Orderable
+from wagtail.images.edit_handlers import ImageChooserPanel
+from wagtail.search import index
+from wagtail.snippets.edit_handlers import SnippetChooserPanel
 
 from bakerydemo.base.blocks import BaseStreamBlock
 
@@ -29,10 +29,10 @@ class BlogPeopleRelationship(Orderable, models.Model):
     the ParentalKey and ForeignKey
     """
     page = ParentalKey(
-        'BlogPage', related_name='blog_person_relationship'
+        'BlogPage', related_name='blog_person_relationship', on_delete=models.CASCADE
     )
     people = models.ForeignKey(
-        'base.People', related_name='person_blog_relationship'
+        'base.People', related_name='person_blog_relationship', on_delete=models.CASCADE
     )
     panels = [
         SnippetChooserPanel('people')
@@ -45,7 +45,7 @@ class BlogPageTag(TaggedItemBase):
     the BlogPage object and tags. There's a longer guide on using it at
     http://docs.wagtail.io/en/latest/reference/pages/model_recipes.html#tagging
     """
-    content_object = ParentalKey('BlogPage', related_name='tagged_items')
+    content_object = ParentalKey('BlogPage', related_name='tagged_items', on_delete=models.CASCADE)
 
 
 class BlogPage(Page):
@@ -89,7 +89,6 @@ class BlogPage(Page):
     ]
 
     search_fields = Page.search_fields + [
-        index.SearchField('title'),
         index.SearchField('body'),
     ]
 
@@ -180,7 +179,7 @@ class BlogIndexPage(RoutablePageMixin, Page):
     # More information on RoutablePages is at
     # http://docs.wagtail.io/en/latest/reference/contrib/routablepage.html
     @route('^tags/$', name='tag_archive')
-    @route('^tags/(\w+)/$', name='tag_archive')
+    @route('^tags/([\w-]+)/$', name='tag_archive')
     def tag_archive(self, request, tag=None):
 
         try:
